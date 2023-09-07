@@ -32,223 +32,188 @@
     </header>
 
     <main>
-      <div class="main__container">
-        <div class="restaurant__img">
+      <div class="main_container">
+        <!-- Restaurant IMG-->
+        <div class="background">
           <img
             src="./Img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-            alt="Restaurant le délice des sens"
           />
         </div>
-        <!--          MENU          -->
-        <article class="menu">
-          <article class="menu__wrap">
-            <!--         RESTAURANT NAME         -->
-            <section class="menu__title">
-              <div>
-                <h1>Le délice des sens</h1>
+        <!--         MENU          -->
+        <article class="restaurant">
+          <section class="restaurant_title">
+            <h1 class="restaurant_name">Le délice des sens</h1>
+            <i class="restaurant_like fa-fh fa-regular fa-heart like"></i>
+          </section>
+          <!--        ENTRÉES          -->
+          <section class="entry">
+            <h2 class="title">ENTRÉES</h2>
+            <!--  Liste cards   -->
+            <div class="entry_cards">
+              <!--   Card 1   -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Tartare de thon</h2>
+                    <p>Assaisonné au yuzu</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>25€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
               </div>
-              <div class="card__content__logo">
-                <i class="fa-regular fa-heart like"></i>
+              <!--   Card 2 -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Bouchée de homard croustillant</h2>
+                    <p>Et sa farandole de petits légumes</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>35€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
               </div>
-            </section>
-            <!--          ENTRY         -->
-            <section class="entry">
-              <section class="entry__wrap">
-                <section>
-                  <h2 class="entry__title">ENTRÉES</h2>
-                </section>
-                <section class="entry__elements">
-                  <!--1st Entrées card-->
-                  <article class="entry__elements__card">
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Tartare de thon</h3>
-                        <p>Assaisonné au yuzu</p>
-                      </div>
-                      <div class="price">
-                        <p>25€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                  <!--2st Entrées card-->
-                  <article class="entry__elements__card">
-                    <!--Food name-->
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Bouchée de homard croustillant</h3>
-                        <p>Et sa farandole de petits légumes</p>
-                      </div>
-                      <!--Price-->
-                      <div class="price">
-                        <p>35€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                  <!--3st Entrées card-->
-                  <article class="entry__elements__card">
-                    <!--Food name-->
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Poulet rôti aux herbes de Provence</h3>
-                        <p>Et sa crème de truffe</p>
-                      </div>
-                      <!--Price-->
-                      <div class="price">
-                        <p>40€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                </section>
-              </section>
-            </section>
-            <!--          PLATS         -->
-            <section class="plat">
-              <section class="plat__wrap">
-                <section>
-                  <h2 class="plat__title">PLATS</h2>
-                </section>
-                <section class="plat__elements">
-                  <!--1st PLATS card-->
-                  <article class="plat__elements__card">
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Poulet rôti aux herbes de Provence</h3>
-                        <p>Et sa crème de truffe</p>
-                      </div>
-                      <div class="price">
-                        <p>40€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                  <!--2st PLATS card-->
-                  <article class="plat__elements__card">
-                    <!--Food name-->
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Langouste rôtie</h3>
-                        <p>Et ses légumes de saison</p>
-                      </div>
-                      <!--Price-->
-                      <div class="price">
-                        <p>35€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                  <!--3st PLATS card-->
-                  <article class="plat__elements__card">
-                    <!--Food name-->
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Côte de boeuf Angus</h3>
-                        <p>Et sa purée de panais</p>
-                      </div>
-                      <!--Price-->
-                      <div class="price">
-                        <p>44€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                </section>
-              </section>
-            </section>
-            <!--          DESSERT         -->
-            <section class="dessert">
-              <section class="dessert__wrap">
-                <section>
-                  <h2 class="dessert__title">DESSERTS</h2>
-                </section>
-                <section class="dessert__elements">
-                  <!--1st Desserts card-->
-                  <article class="dessert__elements__card">
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Farandole de desserts</h3>
-                        <p>Du chef</p>
-                      </div>
-                      <div class="price">
-                        <p>18€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                  <!--2st Desserts card-->
-                  <article class="dessert__elements__card">
-                    <!--Food name-->
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Crème brulée</h3>
-                        <p>Revisitée</p>
-                      </div>
-                      <!--Price-->
-                      <div class="price">
-                        <p>22€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                  <!--3st Desserts card-->
-                  <article class="dessert__elements__card">
-                    <!--Food name-->
-                    <div class="information__flex">
-                      <div class="text">
-                        <h3>Tiramisu</h3>
-                        <p>À la noisette</p>
-                      </div>
-                      <!--Price-->
-                      <div class="price">
-                        <p>23€</p>
-                      </div>
-                    </div>
-                    <div class="validation__area">
-                      <div class="validation">
-                        <i class="fa-solid fa-circle-check"></i>
-                      </div>
-                    </div>
-                  </article>
-                </section>
-              </section>
-            </section>
-            <a href="#" class="menu__button">Commander</a>
-            <!---->
-          </article>
+              <!--   Card 3   -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Poulet rôti aux herbes de Provence</h2>
+                    <p>Et sa crème de truffe</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>40€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--        PLATS          -->
+          <section class="plat">
+            <!--  Titre   -->
+            <h2 class="title">PLATS</h2>
+            <!--  Liste cards   -->
+            <div class="plat_cards">
+              <!--   Card 1   -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Poulet rôti aux herbes de Provence</h2>
+                    <p>Et sa crème de truffe</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>40€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </div>
+              <!--   Card 2 -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Langouste rôtie</h2>
+                    <p>et ses légumes de saison</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>35€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </div>
+              <!--   Card 3   -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Côte de boeuf Angus</h2>
+                    <p>Et sa purée de panais</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>44€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--        DESSERTS          -->
+          <section class="dessert">
+            <!--  Titre   -->
+            <h2 class="title">DESSERTS</h2>
+            <!--  Liste cards   -->
+            <div class="plat_cards">
+              <!--   Card 1   -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Farandole de desserts</h2>
+                    <p>Du chef</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>18€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </div>
+              <!--   Card 2 -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Crème brulée</h2>
+                    <p>Revisitée</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>22€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </div>
+              <!--   Card 3   -->
+              <div class="card">
+                <div class="card_wrap">
+                  <!--  Nom card  -->
+                  <div class="information">
+                    <h2>Tiramisu</h2>
+                    <p>À la noisette</p>
+                  </div>
+                  <!--  Prix  -->
+                  <div class="price"><p>23€</p></div>
+                  <!--  Case Check  -->
+                  <div class="checked">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--      Boutton commander-->
+          <a href="#" class="btn_commander">Commander</a>
         </article>
       </div>
     </main>
@@ -264,17 +229,17 @@
           <div class="text__group">
             <div class="text__flex">
               <i class="fa-fw fa-solid fa-utensils"></i>
-              <p>Proposer un restaurant</p>
+              <a href="#">Proposer un restaurant</a>
             </div>
             <div class="text__flex">
               <i class="fa-fw fa-solid fa-handshake-angle"></i>
-              <p>Devenir partenaire</p>
+              <a href="#">Devenir partenaire</a>
             </div>
           </div>
 
           <div class="text__group">
-            <p>Mentions légales</p>
-            <p>Contact</p>
+            <a href="#">Mentions légales</a>
+            <a href="mailto:Contact@ohmyfood.com">Contact</a>
           </div>
         </article>
       </section>

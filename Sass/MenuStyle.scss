@@ -19,7 +19,6 @@ p {
 
 body {
   margin: 0;
-  @include flex-centered-column;
 }
 
 header {
@@ -59,11 +58,11 @@ header {
   }
 }
 
-.main__container {
+.main_container {
   @include flex-centered-column;
 }
-
-.restaurant__img {
+/*      IMAGE RESTAURANT      */
+.background {
   overflow: hidden;
   max-height: 275px;
   img {
@@ -71,91 +70,68 @@ header {
   }
 }
 
-.menu {
+.restaurant {
   @include flex-centered-column;
+  gap: 40px;
+  max-width: 1080px;
+  position: relative;
+  margin-bottom: -40px;
+  padding: 32px 15px;
+  box-sizing: border-box;
+  top: -40px;
   width: 100%;
+  border-radius: 45px 45px 0 0;
+  background-color: #f6f6f6;
 
-  .menu__title {
+  &_title {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    gap: 25px;
+    align-items: center;
+    gap: 20px;
     width: 100%;
-    padding: 0 25px 0 5px;
-
-    i {
-      font-size: 22px;
-    }
-
-    .like:hover {
-      font-weight: 900;
-      color: transparent;
-      background-image: linear-gradient(#ff79da, #9356dc);
-      background-clip: text;
-      animation-name: like_animation;
-      animation-duration: 1s;
-    }
-    @keyframes like_animation {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  &_name {
+    font-family: "Shrikhand";
+    font-size: 28px;
+    font-weight: 400;
+    text-align: left;
   }
 
-  .menu__wrap {
-    @include flex-centered-column();
-    width: 100%;
-    max-width: 1080px;
-    box-sizing: border-box;
-    padding: 30px 15px;
-    margin-bottom: -50px;
-    position: relative;
-    top: -50px;
-    background-color: #f6f6f6;
-    border-radius: 40px 40px 0 0;
-    gap: 50px;
-
-    h1 {
-      font-family: Shrikhand;
-      font-size: 28px;
-      font-weight: 400;
-    }
+  &_like {
+    font-size: 22px;
   }
 
-  &__button {
-    @include flex-centered-column;
-    text-decoration: none;
-    margin-bottom: 60px;
-    width: 220px;
-    height: 50px;
-    border-radius: 25px;
-    color: white;
+  .like:hover {
+    font-weight: 900;
+    color: transparent;
     background-image: linear-gradient(#ff79da, #9356dc);
-    transition: box-shadow, 0.5s;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25),
-      inset 0 0 0px rgba(255, 255, 255, 0);
-
-    &:hover {
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25),
-        inset 0 0 0px 100px rgb(255, 255, 255, 0.2);
+    background-clip: text;
+    animation-name: like_animation;
+    animation-duration: 1s;
+  }
+  @keyframes like_animation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
 
+/*         SECTION ENTRÉES         */
 .entry,
 .plat,
 .dessert {
-  @include flex-centered-column();
-  gap: 15px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 640px;
+  width: 100%;
 
-  &__title {
+  .title {
     position: relative;
     font-size: 16px;
     font-weight: 300;
@@ -171,146 +147,99 @@ header {
     }
   }
 
-  &__wrap {
-    width: 100%;
+  &_cards {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
   }
 
-  .entry__elements,
-  .plat__elements,
-  .dessert__elements {
-    display: flex;
-    flex-direction: column;
+  & .card {
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 4px 15px 0px #0000001e;
+    height: 70px;
 
-    gap: 12px;
-
-    &__card {
-      overflow: hidden;
+    &_wrap {
       display: flex;
-      justify-content: space-between;
-      box-sizing: border-box;
-      position: relative;
-      width: 100%;
-      padding: 12px 15px;
-      border-radius: 15px;
-      background-color: white;
-      box-shadow: 0px 4px 15px 0px #0000001a;
-
-      .information__flex {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-      }
-
-      .validation__area {
-        width: 0px;
-        transition: 0.5s;
-
-        .validation {
-          transition: 0.5s;
-          transform: translateX(60px);
-          border-radius: 0 15px 15px 0;
-          position: absolute;
-          top: 0;
-          right: 0;
-          background-color: #99e2d0;
-          height: 100%;
-          width: 60px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          i {
-            font-size: 25px;
-
-            color: white;
-          }
-        }
-      }
-
-      &:hover > .validation__area {
-        transition: 0.5s;
-        width: 60px;
-      }
-
-      &:hover > .validation__area > .validation {
-        transition: 0.5s;
-        transform: translateX(0px);
-      }
-    }
-
-    .price {
-      font-weight: 700;
-      display: flex;
-      flex-direction: column-reverse;
-    }
-
-    .text {
-      display: flex;
-      flex-direction: column;
       gap: 5px;
+    }
 
-      h3 {
+    .information {
+      padding: 13px 15px;
+      width: 100%;
+      min-width: 0;
+
+      h2 {
         text-overflow: ellipsis;
         overflow: hidden;
+        white-space: nowrap;
         font-size: 18px;
         font-weight: 500;
+        padding-bottom: 5px;
       }
 
       p {
         text-overflow: ellipsis;
         overflow: hidden;
+        white-space: nowrap;
         font-size: 15px;
         font-weight: 300;
       }
     }
-  }
-}
 
-.animation {
-  &--entry {
-    animation-name: entry-animation;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    animation-delay: 0.25s;
-  }
-  @keyframes entry-animation {
-    to {
-      opacity: 1;
+    .price {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 15px 0 15px 0;
+      p {
+        font-weight: 700;
+      }
     }
-  }
 
-  &--plat {
-    opacity: 0;
-    animation-name: plat-animation;
-    animation-duration: 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-  }
-  @keyframes plat-animation {
-    to {
-      opacity: 1;
+    .checked {
+      @include flex-centered-column();
+      position: relative;
+      right: -60px;
+      margin-left: -60px;
+      max-width: 60px;
+      width: 100%;
+      background-color: #99e2d0;
+      transition: 0.3s;
+
+      i {
+        font-size: 22px;
+        color: white;
+      }
     }
-  }
 
-  &--dessert {
-    opacity: 0;
-    animation-name: dessert-animation;
-    animation-duration: 1s;
-    animation-delay: 0.75s;
-    animation-fill-mode: forwards;
-  }
-  @keyframes dessert-animation {
-    to {
-      opacity: 1;
+    &:hover .checked {
+      right: 0px;
+      margin-left: 0px;
     }
   }
 }
 
-/**         FOOTER          **/
+/*        BOUTTON COMANDER       */
+.btn_commander {
+  @include flex-centered-column();
+  text-decoration: none;
+  max-width: 220px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  transition: 0.5s;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25),
+    inset 0 0 0px rgba(255, 255, 255, 0);
+
+  &:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25),
+      inset 0 0 0px 100px rgb(255, 255, 255, 0.2);
+  }
+}
 .footer {
   box-sizing: border-box;
   color: white;
@@ -346,14 +275,28 @@ header {
     gap: 8px;
     display: flex;
     flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: white;
+      &:visited {
+        color: inherit;
+      }
+    }
   }
 
   .text__flex {
     display: flex;
     align-items: center;
 
-    p {
+    a {
+      text-decoration: none;
+      color: white;
       font-weight: 500;
+
+      &:visited {
+        color: inherit;
+      }
     }
 
     i {
@@ -362,12 +305,6 @@ header {
   }
 }
 
-@media (min-width: 670px) {
-  .menu {
-    @include flex-centered-column;
-    width: 100%;
-  }
-}
 @media (min-width: 1024px) {
   .footer {
     height: 114px;

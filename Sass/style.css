@@ -344,24 +344,27 @@ main {
   display: flex;
   flex-direction: column;
 }
+.footer .text__group a {
+  text-decoration: none;
+  color: white;
+}
+.footer .text__group a:visited {
+  color: inherit;
+}
 .footer .text__flex {
   display: flex;
   align-items: center;
 }
 .footer .text__flex a {
-  padding-left: 5px;
+  text-decoration: none;
+  color: white;
   font-weight: 500;
 }
 .footer .text__flex a:visited {
-  text-decoration: none;
   color: inherit;
 }
 .footer .text__flex i {
   font-size: 13px;
-}
-.footer a {
-  text-decoration: none;
-  color: white;
 }
 
 @media (min-width: 768px) {

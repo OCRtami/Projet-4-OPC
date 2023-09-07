@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -12,10 +13,6 @@ p {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 header {
@@ -56,42 +53,57 @@ header .header__logo a:visited {
   color: inherit;
 }
 
-.main__container {
+.main_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.restaurant__img {
+/*      IMAGE RESTAURANT      */
+.background {
   overflow: hidden;
   max-height: 275px;
 }
-.restaurant__img img {
+.background img {
   width: 100%;
 }
 
-.menu {
+.restaurant {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-.menu .menu__title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  gap: 40px;
+  max-width: 1080px;
+  position: relative;
+  margin-bottom: -40px;
+  padding: 32px 15px;
   box-sizing: border-box;
-  gap: 25px;
+  top: -40px;
   width: 100%;
-  padding: 0 25px 0 5px;
+  border-radius: 45px 45px 0 0;
+  background-color: #f6f6f6;
 }
-.menu .menu__title i {
+.restaurant_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.restaurant_name {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+  text-align: left;
+}
+.restaurant_like {
   font-size: 22px;
 }
-.menu .menu__title .like:hover {
+.restaurant .like:hover {
   font-weight: 900;
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
@@ -108,68 +120,28 @@ header .header__logo a:visited {
     opacity: 1;
   }
 }
-.menu .menu__wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1080px;
-  box-sizing: border-box;
-  padding: 30px 15px;
-  margin-bottom: -50px;
-  position: relative;
-  top: -50px;
-  background-color: #f6f6f6;
-  border-radius: 40px 40px 0 0;
-  gap: 50px;
-}
-.menu .menu__wrap h1 {
-  font-family: Shrikhand;
-  font-size: 28px;
-  font-weight: 400;
-}
-.menu__button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  margin-bottom: 60px;
-  width: 220px;
-  height: 50px;
-  border-radius: 25px;
-  color: white;
-  background-image: linear-gradient(#ff79da, #9356dc);
-  transition: box-shadow, 0.5s;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25), inset 0 0 0px rgba(255, 255, 255, 0);
-}
-.menu__button:hover {
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25), inset 0 0 0px 100px rgba(255, 255, 255, 0.2);
-}
 
+/*         SECTION ENTRÉES         */
 .entry,
 .plat,
 .dessert {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  width: 100%;
+  gap: 20px;
   max-width: 640px;
+  width: 100%;
 }
-.entry__title,
-.plat__title,
-.dessert__title {
+.entry .title,
+.plat .title,
+.dessert .title {
   position: relative;
   font-size: 16px;
   font-weight: 300;
   margin-bottom: 8px;
 }
-.entry__title::after,
-.plat__title::after,
-.dessert__title::after {
+.entry .title::after,
+.plat .title::after,
+.dessert .title::after {
   content: "";
   display: block;
   width: 40px;
@@ -178,224 +150,115 @@ header .header__logo a:visited {
   position: absolute;
   bottom: -8px;
 }
-.entry__wrap,
-.plat__wrap,
-.dessert__wrap {
-  width: 100%;
+.entry_cards,
+.plat_cards,
+.dessert_cards {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
-.entry .entry__elements,
-.entry .plat__elements,
-.entry .dessert__elements,
-.plat .entry__elements,
-.plat .plat__elements,
-.plat .dessert__elements,
-.dessert .entry__elements,
-.dessert .plat__elements,
-.dessert .dessert__elements {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.entry .entry__elements__card,
-.entry .plat__elements__card,
-.entry .dessert__elements__card,
-.plat .entry__elements__card,
-.plat .plat__elements__card,
-.plat .dessert__elements__card,
-.dessert .entry__elements__card,
-.dessert .plat__elements__card,
-.dessert .dessert__elements__card {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
+.entry .card,
+.plat .card,
+.dessert .card {
   box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  padding: 12px 15px;
+  overflow: hidden;
   border-radius: 15px;
   background-color: white;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1176470588);
+  height: 70px;
 }
-.entry .entry__elements__card .information__flex,
-.entry .plat__elements__card .information__flex,
-.entry .dessert__elements__card .information__flex,
-.plat .entry__elements__card .information__flex,
-.plat .plat__elements__card .information__flex,
-.plat .dessert__elements__card .information__flex,
-.dessert .entry__elements__card .information__flex,
-.dessert .plat__elements__card .information__flex,
-.dessert .dessert__elements__card .information__flex {
+.entry .card_wrap,
+.plat .card_wrap,
+.dessert .card_wrap {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-}
-.entry .entry__elements__card .validation__area,
-.entry .plat__elements__card .validation__area,
-.entry .dessert__elements__card .validation__area,
-.plat .entry__elements__card .validation__area,
-.plat .plat__elements__card .validation__area,
-.plat .dessert__elements__card .validation__area,
-.dessert .entry__elements__card .validation__area,
-.dessert .plat__elements__card .validation__area,
-.dessert .dessert__elements__card .validation__area {
-  width: 0px;
-  transition: 0.5s;
-}
-.entry .entry__elements__card .validation__area .validation,
-.entry .plat__elements__card .validation__area .validation,
-.entry .dessert__elements__card .validation__area .validation,
-.plat .entry__elements__card .validation__area .validation,
-.plat .plat__elements__card .validation__area .validation,
-.plat .dessert__elements__card .validation__area .validation,
-.dessert .entry__elements__card .validation__area .validation,
-.dessert .plat__elements__card .validation__area .validation,
-.dessert .dessert__elements__card .validation__area .validation {
-  transition: 0.5s;
-  transform: translateX(60px);
-  border-radius: 0 15px 15px 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #99e2d0;
-  height: 100%;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.entry .entry__elements__card .validation__area .validation i,
-.entry .plat__elements__card .validation__area .validation i,
-.entry .dessert__elements__card .validation__area .validation i,
-.plat .entry__elements__card .validation__area .validation i,
-.plat .plat__elements__card .validation__area .validation i,
-.plat .dessert__elements__card .validation__area .validation i,
-.dessert .entry__elements__card .validation__area .validation i,
-.dessert .plat__elements__card .validation__area .validation i,
-.dessert .dessert__elements__card .validation__area .validation i {
-  font-size: 25px;
-  color: white;
-}
-.entry .entry__elements__card:hover > .validation__area,
-.entry .plat__elements__card:hover > .validation__area,
-.entry .dessert__elements__card:hover > .validation__area,
-.plat .entry__elements__card:hover > .validation__area,
-.plat .plat__elements__card:hover > .validation__area,
-.plat .dessert__elements__card:hover > .validation__area,
-.dessert .entry__elements__card:hover > .validation__area,
-.dessert .plat__elements__card:hover > .validation__area,
-.dessert .dessert__elements__card:hover > .validation__area {
-  transition: 0.5s;
-  width: 60px;
-}
-.entry .entry__elements__card:hover > .validation__area > .validation,
-.entry .plat__elements__card:hover > .validation__area > .validation,
-.entry .dessert__elements__card:hover > .validation__area > .validation,
-.plat .entry__elements__card:hover > .validation__area > .validation,
-.plat .plat__elements__card:hover > .validation__area > .validation,
-.plat .dessert__elements__card:hover > .validation__area > .validation,
-.dessert .entry__elements__card:hover > .validation__area > .validation,
-.dessert .plat__elements__card:hover > .validation__area > .validation,
-.dessert .dessert__elements__card:hover > .validation__area > .validation {
-  transition: 0.5s;
-  transform: translateX(0px);
-}
-.entry .entry__elements .price,
-.entry .plat__elements .price,
-.entry .dessert__elements .price,
-.plat .entry__elements .price,
-.plat .plat__elements .price,
-.plat .dessert__elements .price,
-.dessert .entry__elements .price,
-.dessert .plat__elements .price,
-.dessert .dessert__elements .price {
-  font-weight: 700;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.entry .entry__elements .text,
-.entry .plat__elements .text,
-.entry .dessert__elements .text,
-.plat .entry__elements .text,
-.plat .plat__elements .text,
-.plat .dessert__elements .text,
-.dessert .entry__elements .text,
-.dessert .plat__elements .text,
-.dessert .dessert__elements .text {
-  display: flex;
-  flex-direction: column;
   gap: 5px;
 }
-.entry .entry__elements .text h3,
-.entry .plat__elements .text h3,
-.entry .dessert__elements .text h3,
-.plat .entry__elements .text h3,
-.plat .plat__elements .text h3,
-.plat .dessert__elements .text h3,
-.dessert .entry__elements .text h3,
-.dessert .plat__elements .text h3,
-.dessert .dessert__elements .text h3 {
+.entry .card .information,
+.plat .card .information,
+.dessert .card .information {
+  padding: 13px 15px;
+  width: 100%;
+  min-width: 0;
+}
+.entry .card .information h2,
+.plat .card .information h2,
+.dessert .card .information h2 {
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   font-size: 18px;
   font-weight: 500;
+  padding-bottom: 5px;
 }
-.entry .entry__elements .text p,
-.entry .plat__elements .text p,
-.entry .dessert__elements .text p,
-.plat .entry__elements .text p,
-.plat .plat__elements .text p,
-.plat .dessert__elements .text p,
-.dessert .entry__elements .text p,
-.dessert .plat__elements .text p,
-.dessert .dessert__elements .text p {
+.entry .card .information p,
+.plat .card .information p,
+.dessert .card .information p {
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
   font-size: 15px;
   font-weight: 300;
 }
+.entry .card .price,
+.plat .card .price,
+.dessert .card .price {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 15px 0 15px 0;
+}
+.entry .card .price p,
+.plat .card .price p,
+.dessert .card .price p {
+  font-weight: 700;
+}
+.entry .card .checked,
+.plat .card .checked,
+.dessert .card .checked {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -60px;
+  margin-left: -60px;
+  max-width: 60px;
+  width: 100%;
+  background-color: #99e2d0;
+  transition: 0.3s;
+}
+.entry .card .checked i,
+.plat .card .checked i,
+.dessert .card .checked i {
+  font-size: 22px;
+  color: white;
+}
+.entry .card:hover .checked,
+.plat .card:hover .checked,
+.dessert .card:hover .checked {
+  right: 0px;
+  margin-left: 0px;
+}
 
-.animation--entry {
-  animation-name: entry-animation;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  animation-delay: 0.25s;
+/*        BOUTTON COMANDER       */
+.btn_commander {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  max-width: 220px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  transition: 0.5s;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25), inset 0 0 0px rgba(255, 255, 255, 0);
 }
-@keyframes entry-animation {
-  to {
-    opacity: 1;
-  }
-}
-.animation--plat {
-  opacity: 0;
-  animation-name: plat-animation;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
-}
-@keyframes plat-animation {
-  to {
-    opacity: 1;
-  }
-}
-.animation--dessert {
-  opacity: 0;
-  animation-name: dessert-animation;
-  animation-duration: 1s;
-  animation-delay: 0.75s;
-  animation-fill-mode: forwards;
-}
-@keyframes dessert-animation {
-  to {
-    opacity: 1;
-  }
+.btn_commander:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25), inset 0 0 0px 100px rgba(255, 255, 255, 0.2);
 }
 
-/**         FOOTER          **/
 .footer {
   box-sizing: border-box;
   color: white;
@@ -428,26 +291,29 @@ header .header__logo a:visited {
   display: flex;
   flex-direction: column;
 }
+.footer .text__group a {
+  text-decoration: none;
+  color: white;
+}
+.footer .text__group a:visited {
+  color: inherit;
+}
 .footer .text__flex {
   display: flex;
   align-items: center;
 }
-.footer .text__flex p {
+.footer .text__flex a {
+  text-decoration: none;
+  color: white;
   font-weight: 500;
+}
+.footer .text__flex a:visited {
+  color: inherit;
 }
 .footer .text__flex i {
   font-size: 13px;
 }
 
-@media (min-width: 670px) {
-  .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-}
 @media (min-width: 1024px) {
   .footer {
     height: 114px;
