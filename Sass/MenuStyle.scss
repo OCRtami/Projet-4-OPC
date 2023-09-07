@@ -121,7 +121,7 @@ header {
   }
 }
 
-/*         SECTION ENTRÉES         */
+/*         SECTION ENTREES PLAT DESSERT       */
 .entry,
 .plat,
 .dessert {
@@ -130,6 +130,7 @@ header {
   gap: 20px;
   max-width: 640px;
   width: 100%;
+  animation-name: fade-in;
 
   .title {
     position: relative;
@@ -192,7 +193,7 @@ header {
     .price {
       display: flex;
       flex-direction: column-reverse;
-      padding: 15px 0 15px 0;
+      padding: 15px 15px 15px 0;
       p {
         font-weight: 700;
       }
@@ -221,7 +222,48 @@ header {
   }
 }
 
-/*        BOUTTON COMANDER       */
+.animation {
+  &-entry {
+    animation-name: entry-animation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0.25s;
+  }
+  @keyframes entry-animation {
+    to {
+      opacity: 1;
+    }
+  }
+
+  &-plat {
+    opacity: 0;
+    animation-name: plat-animation;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes plat-animation {
+    to {
+      opacity: 1;
+    }
+  }
+
+  &-dessert {
+    opacity: 0;
+    animation-name: dessert-animation;
+    animation-duration: 1s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes dessert-animation {
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/*    BOUTTON COMANDER   */
 .btn_commander {
   @include flex-centered-column();
   text-decoration: none;
@@ -240,6 +282,8 @@ header {
       inset 0 0 0px 100px rgb(255, 255, 255, 0.2);
   }
 }
+
+/*          FOOTER          */
 .footer {
   box-sizing: border-box;
   color: white;
