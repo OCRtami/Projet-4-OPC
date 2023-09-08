@@ -67,9 +67,10 @@ header {
   overflow: hidden;
   width: 100%;
   img {
+    transition: 0.5s;
     width: 100%;
     object-fit: cover;
-    max-height: 375px;
+    max-height: 275px;
     min-height: 275px;
   }
 }
@@ -376,6 +377,15 @@ header {
     .text__group {
       gap: 8px;
       flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .background {
+    img {
+      transition: 0.5s;
+      max-height: 375px;
     }
   }
 }
