@@ -89,6 +89,7 @@ header .header__logo a:visited {
   width: 100%;
   border-radius: 45px 45px 0 0;
   background-color: #f6f6f6;
+  /*          LIKE BUTTON         */
 }
 .restaurant_title {
   display: flex;
@@ -105,25 +106,27 @@ header .header__logo a:visited {
   font-weight: 400;
   text-align: left;
 }
-.restaurant_like {
+.restaurant .like_border {
+  transition: 0.2s;
   font-size: 22px;
 }
-.restaurant .like:hover {
-  font-weight: 900;
+.restaurant .like_filing {
+  z-index: 1;
+  opacity: 0;
+  font-size: 22px;
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
   -webkit-background-clip: text;
           background-clip: text;
-  animation-name: like_animation;
-  animation-duration: 1s;
+  transition: 0.2s;
 }
-@keyframes like_animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.restaurant .like_filing:hover {
+  transition: 0.2s;
+  opacity: 1;
+}
+.restaurant .like_filing:hover + .like_border {
+  transition: 0.2s;
+  opacity: 0;
 }
 
 /*         SECTION ENTREES PLAT DESSERT       */

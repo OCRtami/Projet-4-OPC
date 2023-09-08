@@ -306,30 +306,34 @@ main {
           align-items: center;
           justify-content: center;
           width: 40px;
-          i {
-            font-size: 22px;
-          }
         }
       }
     }
   }
+  /*          LIKE BUTTON         */
+  .like_border {
+    transition: 0.2s;
+    font-size: 22px;
+  }
 
-  .like:hover {
-    font-weight: 900;
+  .like_filing {
+    z-index: 1;
+    opacity: 0;
+    font-size: 22px;
     color: transparent;
     background-image: linear-gradient(#ff79da, #9356dc);
     background-clip: text;
-    animation-name: like_animation;
-    animation-duration: 1s;
+    transition: 0.2s;
+  }
+  /*    Transition hover like boutton     */
+  .like_filing:hover {
+    transition: 0.2s;
+    opacity: 1;
   }
 
-  @keyframes like_animation {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .like_filing:hover + .like_border {
+    transition: 0.2s;
+    opacity: 0;
   }
 }
 /**         FOOTER          **/
