@@ -65,9 +65,12 @@ header {
 /*      IMAGE RESTAURANT      */
 .background {
   overflow: hidden;
-  max-height: 275px;
+  width: 100%;
   img {
     width: 100%;
+    object-fit: cover;
+    max-height: 375px;
+    min-height: 275px;
   }
 }
 

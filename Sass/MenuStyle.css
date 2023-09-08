@@ -63,10 +63,14 @@ header .header__logo a:visited {
 /*      IMAGE RESTAURANT      */
 .background {
   overflow: hidden;
-  max-height: 275px;
+  width: 100%;
 }
 .background img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 375px;
+  min-height: 275px;
 }
 
 .restaurant {
